@@ -1,4 +1,4 @@
-#include <stdio.h>
+lude <stdio.h>
 #include <stdlib.h>
 
 void main()
@@ -9,7 +9,7 @@ void main()
    int **aNum;
    scanf("%d",&size);
 	tsize=size;
-// À¯µ¿ ÇÒ´çÇÏ±â
+// ìœ ë™ í• ë‹¹í•˜ê¸°
    aNum = (int **)malloc(size * sizeof(int *));
    for(i=0; i<size; ++i)
    {
@@ -39,16 +39,17 @@ void main()
    
 
 
-// °á°ú Ãâ·ÂÇÏ±â
+// ê²°ê³¼ ì¶œë ¥í•˜ê¸°
    for(i=0; i<tsize; ++i)
    {
         for(j=0; j<tsize; ++j) printf("  |%12d|", aNum[i][j]);
         printf("\n");
    }
 
-// ÇÒ´ç ÇØÁ¦ÇÏ±â
+// í• ë‹¹ í•´ì œí•˜ê¸°
    for(i=0; i<tsize; ++i) free(aNum[i]);
    free(aNum);
 
 }
        
+
